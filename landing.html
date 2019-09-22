@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Emil Björklund</title>
+      <link rel="stylesheet" href="css/mystyles.css">
+      
+      
+      <script src='https://www.google.com/recaptcha/api.js'></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+      <script src="form.js"></script>
+  </head>
+  <body>
+      
+    <section class="hero is-fullheight is-light is-bold is-primary">
+      <div id="home" class="hero-body">
+          <div class="container has-text-centered ">
+              <h1 class="title">
+                  Coming Soon
+              </h1>
+              <div class="column is-4 is-center has-text-left">
+              <form method="post" id="reused_form" >
+                  <div class="field colum">
+                      <label class="subtitle">Name</label>
+                      <div class="control">
+                        <input class="input" type="text" name="Name" required maxlength="50">
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label class="subtitle">Email</label>
+                      <div class="control">
+                        <input class="input" type="email" name="Email" required maxlength="50">
+                    </div>
+                    </div>
+                    <div class="field">
+                      <label class="subtitle">Message</label>
+                      <div class="control">
+                        <textarea class="textarea" name="Message" rows="10" maxlength="6000" required></textarea>
+                      </div>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6Lc1h7gUAAAAAFA20FzVQEj1WhsVNe82gHAIeUM7"></div>
+                    <div class="field">
+                      <div class="control">
+                        <button class="button is-link" type="submit">Submit</button>
+                      </div>
+                    </div>
+                    </form>
+                    <div id="success_message" style="display:none">
+                        <h3>Submitted the form successfully!</h3> 
+                        <p> We will get back to you soon. </p>
+                    </div>
+                    <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
+                
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../js/showcase.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: "ease-out",
+            duration: 800,
+        });
+    </script>
+  </body>
+</html>

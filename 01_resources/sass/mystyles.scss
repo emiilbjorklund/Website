@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import "../../02_vendor/sass/animate/_properties";
+@import "../../02_vendor/sass/animate/animate.scss";
+//@import "compass/css3";
+// Set your brand colors
+$primary-light: #88BDBC;
+$primary-dark: #254E58;
+$primary-super-dark: #112D32;
+$second: #4F4A41;
+$second-light: #6E6658;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$grey-dark: $second-light;
+$primary: $primary-dark;
+$is-dark: $primary-super-dark;
+$link: $primary-dark;
+$title-color:$grey-dark;
+$heading-color: $grey-dark;
+$table-color: $grey-dark;
+$table-cell-heading-color: $grey-dark;
+$table-head-cell-color: $grey-dark;
+$footer-color: true;
+$footer-background-color: $primary-super-dark;
+
+.bounce{
+    @include bounceIn(
+      $duration: 1s,
+      $count: 2,
+      $delay: .2s,
+      $function: ease, 
+      $fill: both
+    );
+  }
+
+
+
+// Import only what you need from Bulma
+@import "utilities/_all.sass";
+@import "../bulma.sass";
+@import "base/_all.sass";
+@import "elements/button.sass";
+@import "elements/container.sass";
+@import "elements/title.sass";
+@import "form/_all.sass";
+@import "components/navbar.sass";
+@import "layout/hero.sass";
+@import "layout/section.sass";
